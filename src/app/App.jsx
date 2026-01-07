@@ -1,9 +1,8 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
-import Home from './pages/Home/Home'
-import About from './pages/About/About'
-import Numbers from './pages/Numbers/Numbers'
+import Home from '../pages/Home'
+import About from './../pages/About';
+import Numbers from './../pages/Numbers';
 
 export default function App() {
   return (

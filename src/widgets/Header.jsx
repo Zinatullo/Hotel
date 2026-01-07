@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { IoCallOutline, IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { NavLink } from 'react-router-dom';
   export const navs = [
