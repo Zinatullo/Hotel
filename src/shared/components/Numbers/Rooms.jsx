@@ -104,30 +104,32 @@ export default function Rooms() {
     <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-        <div className="flex justify-center mb-16">
-          <div className="flex bg-gray-200 rounded-full p-1 gap-1 text-sm">
-            {[
-              ["all", "Все номера"],
-              ["standart", "Стандарт"],
-              ["luxe", "Люкс"],
-              ["family", "Семейные"],
-              ["apartament", "Апартаменты"],
-            ].map(([key, label]) => (
-              <button
-                key={key}
-                onClick={() => setActive(key)}
-                className={`px-4 sm:px-6 py-2 rounded-full transition
-                  ${
-                    active === key
-                      ? "bg-white shadow"
-                      : "text-gray-600"
-                  }`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
+<div className="flex justify-center mb-16">
+  <div className="w-full sm:w-auto">
+    <div className="flex flex-wrap justify-center gap-2 sm:flex-nowrap sm:bg-gray-200 sm:rounded-full sm:p-1">
+      {[
+        ["all", "Все номера"],
+        ["standart", "Стандарт"],
+        ["luxe", "Люкс"],
+        ["family", "Семейные"],
+        ["apartament", "Апартаменты"],
+      ].map(([key, label]) => (
+        <button
+          key={key}
+          onClick={() => setActive(key)}
+          className={`px-4 sm:px-6 py-2 rounded-full transition text-sm
+            ${
+              active === key
+                ? "bg-white shadow"
+                : "text-gray-600"
+            }`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+</div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filtered.map((el, i) => (
