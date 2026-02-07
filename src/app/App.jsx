@@ -8,7 +8,7 @@ import Restoraunt from '../pages/Restoraunt';
 import Galary from '../pages/Galary';
 import Reviews from '../pages/Reviews';
 import Contacts from '../pages/Contacts';
-import Booking from '../shared/components/Home/Booking';
+import Boking from '../pages/Boking';
 
 export default function App() {
   return (
@@ -22,7 +22,7 @@ export default function App() {
       <Route path='/galary' element={<Galary/>}/>
       <Route path='/reviews' element={<Reviews/>}/>
       <Route path='/contacts' element={<Contacts/>}/>
-      <Route path='/booking' element={<Booking/>}/>
+      <Route path='/booking' element={<Boking/>}/>
       <Route path='*'/>
       </Route>
     </Routes> 

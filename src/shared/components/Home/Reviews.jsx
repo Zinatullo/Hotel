@@ -27,51 +27,57 @@ export default function Reviews() {
   ];
 
   function getAvatar(name) {
-    return name[0].toUpperCase() + name.split(" ")[1][0].toUpperCase();
+    const parts = name.split(" ");
+    return (
+      (parts[0]?.[0]?.toUpperCase() || "") +
+      (parts[1]?.[0]?.toUpperCase() || "")
+    );
   }
 
   return (
-    <section className="my-12 px-4 md:px-10 lg:px-20">
-      <div className="text-center flex flex-col gap-3 mb-10">
-        <h2 className="font-medium text-lg md:text-[20px]">
-          Отзывы наших гостей
-        </h2>
-        <p className="text-gray-500 font-normal text-base md:text-lg">
-          Узнайте, что говорят о нас наши клиенты
-        </p>
-      </div>
+    <section className="my-12">
+      <div className="container mx-auto px-4">
+        <div className="text-center flex flex-col gap-3 mb-10">
+          <h2 className="font-medium text-lg md:text-[20px]">
+            Отзывы наших гостей
+          </h2>
+          <p className="text-gray-500 font-normal text-base md:text-lg">
+            Узнайте, что говорят о нас наши клиенты
+          </p>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {reviews.map((review) => (
-          <div
-            key={review.id}
-            className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
-          >
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-medium text-sm">
-                  {getAvatar(review.name)}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reviews.map((review) => (
+            <div
+              key={review.id}
+              className="border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-medium text-sm">
+                    {getAvatar(review.name)}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-normal">{review.name}</h3>
+                    <span className="text-sm">{review.star}</span>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-lg font-normal">{review.name}</h3>
-                  <span className="text-sm">{review.star}</span>
-                </div>
+                <p className="text-gray-500 text-sm">{review.date}</p>
               </div>
-              <p className="text-gray-500 text-sm">{review.date}</p>
+
+              <p className="text-gray-500 leading-relaxed">{review.text}</p>
             </div>
+          ))}
+        </div>
 
-            <p className="text-gray-500 leading-relaxed">{review.text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="text-center mt-10">
-        <NavLink
-          to="reviews"
-          className="px-6 py-2 font-medium rounded-lg border border-gray-300"
-        >
-          Все отзывы {" >"}
-        </NavLink>
+        <div className="text-center mt-10">
+          <NavLink
+            to="reviews"
+            className="inline-block px-6 py-2 font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
+          >
+            Все отзывы {">"}
+          </NavLink>
+        </div>
       </div>
     </section>
   );

@@ -21,7 +21,6 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
           <NavLink to="/" className="flex items-center gap-2 sm:gap-3">
             <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-amber-700 rounded-lg sm:rounded-xl text-white text-base sm:text-lg md:text-xl flex items-center justify-center font-bold shrink-0">
               H
@@ -36,7 +35,6 @@ export default function Header() {
             </div>
           </NavLink>
 
-          {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-1">
             {navs.map(el => (
               <NavLink
@@ -54,7 +52,6 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Desktop Actions */}
           <div className="flex items-center gap-3 sm:gap-4">
             <div className="hidden xl:flex items-center gap-4">
               <div className="hidden 2xl:flex items-center gap-3">
@@ -71,7 +68,6 @@ export default function Header() {
               </NavLink>
             </div>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="xl:hidden text-gray-800 text-2xl sm:text-3xl p-2 hover:bg-gray-100 rounded-lg transition"
@@ -84,7 +80,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="xl:hidden bg-white border-t border-gray-200 shadow-lg">
           <div className="max-w-7xl mx-auto">
@@ -105,7 +100,6 @@ export default function Header() {
                 </NavLink>
               ))}
 
-              {/* Mobile Contact & Booking */}
               <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
                 <a 
                   href="tel:+74951234567"

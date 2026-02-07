@@ -4,7 +4,7 @@ export default function History() {
   return (
     <>
       <section className="my-20 px-4 md:px-10 lg:px-30">
-        <div className="mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col xl:flex-row items-center gap-10 xl:gap-15">
             
             <div>

@@ -23,7 +23,6 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
             
-            {/* About Section */}
             <div className="w-full max-w-sm mb-5">
               <div className="flex items-center gap-2">
                 <div className="w-12 h-12 md:w-14 md:h-14 bg-amber-700 rounded-xl text-white text-lg md:text-xl flex items-center justify-center font-bold">
@@ -50,7 +49,6 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Navigation Section */}
             <div className="w-full max-w-sm flex flex-col gap-2">
               <h3 className="mb-2 font-medium text-base md:text-lg">Навигация</h3>
               {navs
@@ -66,7 +64,6 @@ export default function Footer() {
                 ))}
             </div>
 
-            {/* Services Section */}
             <div className="w-full max-w-sm flex flex-col gap-2 md:gap-3">
               <h3 className="mb-2 font-medium text-base md:text-lg">Услуги</h3>
               {usl.map((el, index) => (
@@ -76,7 +73,6 @@ export default function Footer() {
               ))}
             </div>
 
-            {/* Contacts Section */}
             <div className="w-full max-w-sm flex flex-col gap-3 md:gap-4">
               <h3 className="mb-2 font-medium text-base md:text-lg">Контакты</h3>
               <div className="flex items-start gap-2 text-gray-300">
@@ -100,7 +96,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-gray-800">
           <p className="text-center text-gray-400 text-xs md:text-sm">
             © 2025 Grand Hotel. Все права защищены.
